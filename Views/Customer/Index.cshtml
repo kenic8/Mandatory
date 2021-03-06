@@ -1,0 +1,35 @@
+﻿
+
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@{
+    ViewData["Title"] = "Customer";
+}
+
+<section class="CustomerContent">
+    <h1> Single viewbag</h1>
+    <div style="margin-left:10%; margin-top:4%;" class="CustomerContent-container">
+        <h2>@ViewBag.CostumerTry1.FirstName  @ViewBag.CostumerTry1.LastName</h2>
+        <h2>@ViewBag.CostumerTry1.Address</h2>
+        <h2>@ViewBag.CostumerTry1.Zip @ViewBag.CostumerTry1.City</h2>
+        <hr>
+    </div>
+</section>
+
+<h1> ViewBag List</h1>
+
+
+<section class="CustomerContent">
+    @{
+        foreach (var customer in ViewBag.Customers)
+        {
+            <div style="margin-left:10%; margin-top:4%;" class="CustomerContent-container">
+                <h2>@(customer.FirstName + " " + customer.LastName)</h2>
+                <p>@customer.Address</p>
+                <p>@(customer.Zip + " " + customer.City)</p>
+                <p>Tlf: @(String.Join(", ", customer.PhoneNumber))</p>
+                <p>@customer.age years old</p>
+                <hr>
+            </div>
+        }
+    }
+</section>

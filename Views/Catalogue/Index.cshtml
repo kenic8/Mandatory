@@ -1,0 +1,130 @@
+﻿
+
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@{
+    ViewData["Title"] = "Product";
+}
+
+
+
+<div class="flex-container">
+
+
+
+
+    <div class="row1">
+        <div style="margin-bottom:16%;" class="Books">
+            <h1>The Books</h1>
+            @{ foreach (var book in ViewBag.BookList)
+                {
+                    <div class="row-content">
+                        <p><b>Title</b> @book.Title</p>
+                        <p><b>Author</b> @book.Author</p>
+                        <p><b>Price</b> @book.Price</p>
+                        <p><b>ISBN</b> @book.ISBN</p>
+                        <p><b>Publisher</b> @book.Publisher</p>
+                        <img style="width:220px; height:300px" src="/Images/@book.ImageFileName" />
+                    </div>
+                    <hr style="width:90%" />
+
+                }
+            }
+        </div>
+        <h1>The Movies</h1>
+
+        <div class="movies">
+            @foreach (var movie in ViewBag.Movies)
+            {
+
+                <h3>@movie.Title</h3>
+                <h4>Director:  @movie.Director</h4>
+                <p> <b>Price: </b> @String.Format("{0:0.00}", movie.Price)</p>
+                <p><img src="/Images/@movie.ImageFileName" alt="@movie.Title" /></p>
+                <hr />
+
+            }
+
+
+        </div>
+
+    </div>
+
+    <div class="row2">
+        <h1>The Albums</h1>
+
+        @{
+            foreach (var Cd in ViewBag.MusicCDList)
+
+            {
+                <div class="flex-container-inner">
+                    <div class="inner-1-content">
+                        <p><b>Album</b> @Cd.Title</p>
+                        <p><b>Artist</b> @Cd.Artist</p>
+                        <p><b>Price</b> @Cd.Price</p>
+                        <p><b>Publisher</b> @Cd.Label</p>
+                        <p><b>Total Playtime</b> @Cd.Total</p>
+                        <img style="width:300px; height:300px" src="/Images/@Cd.ImageFileName" />
+                    </div>
+
+                    <div class="inner-2">
+                        <div class="inner-2-content">
+                            <ul>
+                                @{
+                                    var num = 1;
+                                    foreach (var track in Cd.Tracks)
+                                    {
+                                        <li style="list-style:none;">@num.  @track.Title (@track.Composer) -  @track.Length.Minutes:@track.Length.Seconds </li>
+                                        num++;
+                                    }
+                                }
+
+                            </ul>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+            }
+        }
+
+        <h1> Invoices</h1>
+        <table>
+            <tr>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+            @foreach (var invoice in ViewBag.InvoicesList)
+            {
+                <tr>
+                    <td>@invoice.Customer.FirstName @invoice.Customer.LastName</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                @foreach (var orderItem in invoice.Orderitems)
+                {
+
+                    <tr>
+                        <td></td>
+                        <td> @orderItem.Product.Title</td>
+                        <td> @orderItem.Product.Price</td>
+                    </tr>
+
+                }
+
+
+
+                <tr>
+
+                    <td style="background-color:#dddddd;"></td>
+                    <td style="background-color:#dddddd;"><b>Total</b></td>
+                    <td style="background-color: #dddddd;">@invoice.TotalPrice</td>
+                </tr>
+
+            }
+        </table>
+
+    </div>
+</div>
+
+

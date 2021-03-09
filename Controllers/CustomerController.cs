@@ -19,9 +19,9 @@ namespace MbmStore.Controllers
 
             ///////Single 
 
-            var costumerTry1 = new Customer("lars", "petersen 14", "ceresbyen", "8000", "aarhus", new DateTime(2000, 5, 1, 8, 30, 52));
-            var costumerTry2 = new Customer("peter", "petersen 32", "ceresbyen", "8000", "aarhus", new DateTime(1900, 5, 1, 8, 30, 52));
-            var costumerTry3 = new Customer("kurt", "kurtsen 15", "ceresbyen", "8000", "aarhus", new DateTime(1988, 5, 1, 8, 30, 52));
+            var costumerTry1 = new Customer("lars", "petersen 14", "ceresbyen", "8000", "aarhus", new DateTime(2000, 5, 1, 8, 30, 52),1);
+            var costumerTry2 = new Customer("peter", "petersen 32", "ceresbyen", "8000", "aarhus", new DateTime(1900, 5, 1, 8, 30, 52),2);
+            var costumerTry3 = new Customer("kurt", "kurtsen 15", "ceresbyen", "8000", "aarhus", new DateTime(1988, 5, 1, 8, 30, 52),3);
 
             /// viewbag 
 

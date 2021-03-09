@@ -86,44 +86,6 @@
             }
         }
 
-        <h1> Invoices</h1>
-        <table>
-            <tr>
-                <th>Customer</th>
-                <th>Product</th>
-                <th>Price</th>
-            </tr>
-            @foreach (var invoice in ViewBag.InvoicesList)
-            {
-                <tr>
-                    <td>@invoice.Customer.FirstName @invoice.Customer.LastName</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                @foreach (var orderItem in invoice.Orderitems)
-                {
-
-                    <tr>
-                        <td></td>
-                        <td> @orderItem.Product.Title</td>
-                        <td> @orderItem.Product.Price</td>
-                    </tr>
-
-                }
-
-
-
-                <tr>
-
-                    <td style="background-color:#dddddd;"></td>
-                    <td style="background-color:#dddddd;"><b>Total</b></td>
-                    <td style="background-color: #dddddd;">@invoice.TotalPrice</td>
-                </tr>
-
-            }
-        </table>
-
     </div>
 </div>
 

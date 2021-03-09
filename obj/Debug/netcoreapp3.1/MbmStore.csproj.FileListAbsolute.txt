@@ -71,3 +71,5 @@ C:\Users\lille\Desktop\PBA - 2021\Code\Mandatory\MbmStore\obj\Debug\netcoreapp3.
 C:\Users\lille\Desktop\PBA - 2021\Code\Mandatory\MbmStore\obj\Debug\netcoreapp3.1\MbmStore.csprojAssemblyReference.cache
 C:\Users\lille\Desktop\PBA - 2021\Code\Mandatory\MbmStore\obj\Debug\netcoreapp3.1\Razor\Views\Catalogue\Index.cshtml.g.cs
 C:\Users\lille\Desktop\PBA - 2021\Code\Mandatory\MbmStore\obj\Debug\netcoreapp3.1\scopedcss\bundle\MbmStore.styles.css
+C:\Users\lille\Desktop\PBA - 2021\Code\Mandatory\MbmStore\obj\Debug\netcoreapp3.1\Razor\Views\Invoice\Index.cshtml.g.cs
+C:\Users\lille\Desktop\PBA - 2021\Code\Mandatory\MbmStore\obj\Debug\netcoreapp3.1\Razor\Views\Invoice\InvoiceSorted.cshtml.g.cs

@@ -6,7 +6,7 @@ namespace MbmStore.Models
 {
     public class Customer
     {
-
+        public int CustomerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
@@ -56,7 +56,7 @@ namespace MbmStore.Models
 
 
 
-        public Customer(string firstname, string lastname, string address, string zip, string city, DateTime birthdate) 
+        public Customer(string firstname, string lastname, string address, string zip, string city, DateTime birthdate, int id) 
         {
             FirstName = firstname;
             LastName = lastname;
@@ -64,6 +64,7 @@ namespace MbmStore.Models
             City = city;
             Zip = zip;
             BirthDate = birthdate;
+            CustomerId = id;
 
         }
 

@@ -1,7 +1,14 @@
-﻿using System;
+﻿using MbmStore.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MbmStore.Models;
+
+
+
+
 
 namespace MbmStore.Models
 {
@@ -10,6 +17,7 @@ namespace MbmStore.Models
 
         private decimal totalPrice { get; set; }
 
+     
 
         //readonly 
         public decimal TotalPrice
@@ -34,6 +42,9 @@ namespace MbmStore.Models
 
         public Customer Customer { get; }
 
+      
+
+
         public DateTime OrderDate { get; set; }
 
         public int InvoiceId { get; set; }
@@ -42,7 +53,7 @@ namespace MbmStore.Models
         //public int MyProperty { get; set; }
 
 
-
+   
 
 
         public Invoice() { }
@@ -58,14 +69,20 @@ namespace MbmStore.Models
           
         }
 
-
+        ///method for adding an order item to invoice
         public void AddOrderItem(Product product, int quantity)
         {
 
             Orderitems.Add(new OrderItem(product, quantity));
         }
 
+
+ 
+
+
     }
+
+
 
 
 

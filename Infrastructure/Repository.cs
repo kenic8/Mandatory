@@ -81,11 +81,11 @@ namespace MbmStore.Infrastructure
 
 
             //// customers
-            Customer Lars = new Customer("Lars", "Hansen", "ceresbyen", "8000", "aarhus", new DateTime(2000, 5, 1, 8, 30, 52));
+            Customer Lars = new Customer("Lars", "Hansen", "ceresbyen", "8000", "aarhus", new DateTime(2000, 5, 1, 8, 30, 52),1);
 
-            Customer Peter = new Customer("Peter", "Nielsen", "ceresbyen", "8000", "aarhus", new DateTime(1900, 5, 1, 8, 30, 52));
+            Customer Peter = new Customer("Peter", "Nielsen", "ceresbyen", "8000", "aarhus", new DateTime(1900, 5, 1, 8, 30, 52),2);
 
-            Customer Kurt = new Customer("kurt", "Johnson", "ceresbyen", "8000", "aarhus", new DateTime(1988, 5, 1, 8, 30, 52));
+            Customer Kurt = new Customer("kurt", "Johnson", "ceresbyen", "8000", "aarhus", new DateTime(1988, 5, 1, 8, 30, 52),3);
 
 
             ////costumer phones
